@@ -12,6 +12,12 @@ export default {
         background: "var(--background)",
         foreground: "var(--foreground)",
       },
+      fontFamily: {
+        serif: ["DM Serif Text", "serif"],
+      },
+      letterSpacing: {
+        tightest: "-.075em",
+      },
     },
   },
   plugins: [],

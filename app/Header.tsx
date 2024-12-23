@@ -9,12 +9,13 @@
 // };
 
 export const Header = () => {
-    // TODO: Film leader font???
     return (
         <header>
             <div className="sticky top-0">
-                <div className="p-8 max-w-72 flex flex-col gap-10">
-                    <h1 className="font-serif text-5xl tracking-tightest">Nick Arcuri</h1>
+                <div className="py-8 px-8 sm:pr-0 sticky top-0 sm:static sm:max-w-72 flex flex-col gap-10">
+                    <h1 className="font-serif text-5xl tracking-tightest text-center sm:text-left">
+                        Nick Arcuri
+                    </h1>
                 </div>
             </div>
         </header>

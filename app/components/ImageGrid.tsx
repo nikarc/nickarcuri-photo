@@ -40,7 +40,7 @@ const MasonryCard = ({
   return (
     <div
       key={Key}
-      className="flex items-center aspect-square sm:aspect-auto sm:h-[100vh]"
+      className="flex items-center aspect-square sm:aspect-auto sm:h-[100vh] cursor-zoom-in"
       onClick={() => setLightboxOpen(url)}
     >
       <div className="relative sm:h-[98%] h-full w-full snap-start sm:snap-center">

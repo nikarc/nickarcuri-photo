@@ -36,14 +36,13 @@
 @theme {
 	--font-display: 'DM Serif Display', ui-serif, Georgia, serif;
 	--font-mono: 'Xanh Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --color-app-bg: #fcfaf9;
+  --color-app-fg: #49505f;
 }
 
 @layer base {
   body,
   html {
-    background-color: #fcfaf9;
-    color: #49505f;
-
-    @apply p-4;
+    @apply bg-app-bg text-app-fg;
   }
 }

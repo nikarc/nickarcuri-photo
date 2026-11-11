@@ -5,22 +5,22 @@
   import { cn } from "#lib/tw-utils.ts";
   import Header from "@/ui/header.svelte";
 
-  const imagesQuery = createQuery(() => ({
+  const pageQuery = createQuery(() => ({
     queryKey: ["pages", 4],
     queryFn: defaultQueryFn<HomePage>,
     enabled: true,
   }));
 </script>
 
-<Header />
-{#if imagesQuery.isSuccess}
+{#if pageQuery.isSuccess}
+  <Header title={pageQuery.data.title} description={pageQuery.data.body} />
   <div class="flex flex-col gap-y-12">
-    {#each imagesQuery.data.images as image, index (image.id)}
+    {#each pageQuery.data.images as image, index (image.id)}
       <div
         class={cn("flex", index % 2 === 0 ? "flex-row-reverse" : "flex-row")}
       >
         <img
-          src={image.image.meta.download_url}
+          src={image.image_thumb.url}
           alt={image.image.title}
           class="max-w-[50vw]"
         />

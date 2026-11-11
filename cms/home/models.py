@@ -1,3 +1,5 @@
+from typing import ClassVar
+
 from django.db import models
 from modelcluster.fields import ParentalKey
 from wagtail.admin.panels import MultipleChooserPanel
@@ -10,26 +12,26 @@ from wagtail.models import Orderable, Page
 class HomePage(Page):
     body = RichTextField(blank=True)
 
-    content_panels = Page.content_panels + [
+    content_panels: ClassVar[list] = Page.content_panels + [
         "body",
         MultipleChooserPanel("images", label="Images", chooser_field_name="image"),
     ]
 
-    api_fields = [
+    api_fields: ClassVar[list] = [
         APIField("body"),
         APIField("images"),
     ]
 
 
-class HomePageImage(Orderable):
+class PageImage(Orderable):
     page = ParentalKey(HomePage, on_delete=models.CASCADE, related_name="images")
     image = models.ForeignKey(
         "wagtailimages.Image", on_delete=models.CASCADE, related_name="+"
     )
 
-    panels = ["image"]
+    panels: ClassVar[list] = ["image"]
 
-    api_fields = [
+    api_fields: ClassVar[list] = [
         APIField("image"),
         APIField(
             "image_full",

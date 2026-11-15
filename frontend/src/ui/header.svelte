@@ -14,7 +14,7 @@ let isScrolled = $derived(scrollY > 0);
 
 <svelte:window bind:scrollY />
 
-<header class={cn("mb-12 sticky top-0 p-4 bg-app-bg transition-shadow", isScrolled ? 'shadow-sm' : '')}>
+<header class={cn("mb-12 sticky top-0 p-4 bg-app-bg transition-shadow flex flex-col gap-y-2", isScrolled ? 'shadow-sm' : '')}>
   <h1 class="text-5xl font-bold tracking-tight font-display">{title}</h1>
   {#if description}
   <RichText html={description} wrapperClass="font-mono" />

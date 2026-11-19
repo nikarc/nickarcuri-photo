@@ -4,6 +4,9 @@
   "main": ".svelte-kit/cloudflare/_worker.js",
   "compatibility_date": "2026-11-01",
   "compatibility_flags": ["nodejs_compat"],
+  "vars": {
+    "PUBLIC_WAGTAIL_URL": "https://nickarcuri-photo-production.up.railway.app"
+  },
   "assets": {
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"

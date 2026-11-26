@@ -40,3 +40,4 @@ wheels/
 
 # Secrets
 .env
+.env.keys

@@ -2,47 +2,52 @@
 @plugin '@tailwindcss/typography';
 
 @font-face {
-	font-family: 'DM Serif Display';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url('/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
+  font-family: 'DM Serif Display';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/DMSerifDisplay-Regular.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'DM Serif Display';
-	font-style: italic;
-	font-weight: 400;
-	font-display: swap;
-	src: url('/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
+  font-family: 'DM Serif Display';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/DMSerifDisplay-Italic.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Xanh Mono';
-	font-style: normal;
-	font-weight: 400;
-	font-display: swap;
-	src: url('/fonts/XanhMono-Regular.ttf') format('truetype');
+  font-family: 'Xanh Mono';
+  font-style: normal;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/XanhMono-Regular.ttf') format('truetype');
 }
 
 @font-face {
-	font-family: 'Xanh Mono';
-	font-style: italic;
-	font-weight: 400;
-	font-display: swap;
-	src: url('/fonts/XanhMono-Italic.ttf') format('truetype');
+  font-family: 'Xanh Mono';
+  font-style: italic;
+  font-weight: 400;
+  font-display: swap;
+  src: url('/fonts/XanhMono-Italic.ttf') format('truetype');
 }
 
 @theme {
-	--font-display: 'DM Serif Display', ui-serif, Georgia, serif;
-	--font-mono: 'Xanh Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
+  --font-display: 'DM Serif Display', ui-serif, Georgia, serif;
+  --font-mono: 'Xanh Mono', ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, monospace;
   --color-app-bg: #fcfaf9;
   --color-app-fg: #49505f;
 }
 
 @layer base {
+
   body,
   html {
     @apply bg-app-bg text-app-fg;
   }
+}
+
+:root {
+  --svelte-lightbox-arrows-color: white !important;
 }

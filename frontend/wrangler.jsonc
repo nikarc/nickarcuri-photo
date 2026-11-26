@@ -6,9 +6,6 @@
   "compatibility_flags": [
     "nodejs_compat"
   ],
-  "vars": {
-    "PUBLIC_WAGTAIL_URL": "https://cms.nickarcuri.photo"
-  },
   "assets": {
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"

@@ -12,5 +12,10 @@
   "assets": {
     "binding": "ASSETS",
     "directory": ".svelte-kit/cloudflare"
+  },
+  "previews": {
+    "vars": {
+      "PUBLIC_WAGTAIL_URL": "https://cms.nickarcuri.photo"
+    },
   }
 }
